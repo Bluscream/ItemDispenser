@@ -4,6 +4,7 @@
     <Authors>Ryzhehvost</Authors>
     <AssemblyVersion>0.1.1.0</AssemblyVersion>
     <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+    <ApplicationIcon></ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,9 +14,5 @@
   <ItemGroup>
     <ProjectReference Include="..\ArchiSteamFarm\ArchiSteamFarm\ArchiSteamFarm.csproj" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir $(TargetDir)ItemDispenser&#xD;&#xA;copy $(TargetPath) $(TargetDir)ItemDispenser\&#xD;&#xA;7z a -tzip -mx7  ItemDispenser.zip $(TargetDir)ItemDispenser" />
-  </Target>
 
 </Project>
